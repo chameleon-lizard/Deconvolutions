@@ -329,6 +329,24 @@
   \end{figure}
 \end{frame}
 
+
+\begin{frame}{Restoration}
+  \begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.4\textwidth}
+        \includegraphics[width=0.8\textwidth]{images/unblurred_rl_high_noise.png}
+        \caption{Unblurred using Richardson-Lucy, \break SSIM = 0.026, PSNR = 8.0828}
+        \label{fig:restored5}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.4\textwidth}
+        \includegraphics[width=0.8\textwidth]{images/unblurred_w_high_noise.png}
+        \caption{Unblurred using Wiener, \break SSIM = 0.3427, PSNR = 19.7582}
+        \label{fig:restored6}
+    \end{subfigure}
+    \caption{Deconvolutions of images with gaussian noise with sigma = 0.3}
+  \end{figure}
+\end{frame}
+
 \begin{frame}{Restoration}
   \begin{figure}
     \centering
@@ -349,8 +367,8 @@
 \section{Conclusions}
 \begin{frame}{Conclusions}
   \begin{itemize}
-      \item Richardson-Lucy method of deconvolution has no
-      edge effects on non-noisy images, opposed to Wiener filtering,
+      \item Richardson-Lucy method of deconvolution is not as susceptible to the
+      edge ringing effects on non-noisy images, opposed to Wiener filtering,
       \item Both PSNR and SSIM metrics are far better with Wiener filtering,
       \item Both Wiener filtering and Richardson-Lucy method
       are vulnerable to noise.
