@@ -184,6 +184,22 @@
 \end{frame}
 
 \begin{frame}{Wiener}
+  If we divide both parts of the fraction by $S(f)$, we can
+  rewrite the equation:
+  $$
+  G(f) = \frac{H^*(f)}{|H(f)|^2+\frac{N(f)}{S(f)}}.
+  $$
+  Since calculating the PSD of the signal and the noise requires
+  a lot of knowledge about the optical system and the original signal,
+  in practice, the fraction is usually being replaced by a parameter $K$:
+  $$
+  G(f) = \frac{H^*(f)}{|H(f)|^2+K}.
+  $$
+  Thus, we get only two hyperparameters of the whole process - the PSF and
+  the parameter $K$.
+\end{frame}
+
+\begin{frame}{Wiener}
   Thus, we can carry out the operation in the frequency domain as following:
   
   $$
